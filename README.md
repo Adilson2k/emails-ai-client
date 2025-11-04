@@ -47,8 +47,8 @@ emails-ai-client/
 │   ├── StatCard.tsx         # Card de estatística
 │   ├── StatusBadge.tsx      # Badge de status
 │   └── EmailCard.tsx        # Card de email
-├── lib/
-│   ├── api.ts               # Configuração da API
+├── src/libs/
+│   ├── api.ts               # Configuração da API (novo local)
 │   └── services/
 │       ├── emailService.ts  # Serviços de email
 │       └── statusService.ts # Serviços de status

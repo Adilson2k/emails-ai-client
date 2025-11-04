@@ -72,8 +72,23 @@ export const emailService = {
    * Obtém estatísticas gerais (totais).
    */
   async getGeneralStats(): Promise<GeneralStats> {
-    const response = await api.get('/emails/general-stats');
-    return response.data;
+    try {
+      const response = await api.get('/emails/general-stats');
+      return response.data;
+    } catch (err) {
+      // Log mais informativo e fallback para evitar quebra da UI
+      // Pode ser substituído por um logger mais robusto se houver
+      // Também retorna valores padrão para manter o tipo esperado
+      console.error('emailService.getGeneralStats error:', err);
+      return {
+        totalEmails: 0,
+        highPriority: 0,
+        mediumPriority: 0,
+        lowPriority: 0,
+        smsSent: 0,
+        uniqueSenders: 0,
+      } as GeneralStats;
+    }
   },
 
   /**

@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 interface EmailCardProps {
   email: {
@@ -59,4 +59,3 @@ export default function EmailCard({ email, index }: EmailCardProps) {
     </div>
   );
 }
-

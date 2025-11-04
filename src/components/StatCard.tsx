@@ -25,7 +25,7 @@ export default function StatCard({
 
   return (
     <div 
-      className="bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 p-6 hover:shadow-md transition-smooth animate-fadeIn"
+      className="bg-white dark:bg-gray-800 rounded-2xl shadow-sm hover:shadow-md border border-gray-200/70 dark:border-gray-700/70 p-6 transition-all duration-200 ease-out hover:scale-[1.02]"
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-start justify-between">
@@ -43,7 +43,7 @@ export default function StatCard({
           )}
         </div>
         {icon && (
-          <div className="p-3 bg-blue-100 dark:bg-blue-900 rounded-lg">
+          <div className="p-3 bg-indigo-100 dark:bg-indigo-900/50 rounded-2xl">
             {icon}
           </div>
         )}
@@ -51,4 +51,3 @@ export default function StatCard({
     </div>
   );
 }
-
